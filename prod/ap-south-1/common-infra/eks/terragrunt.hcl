@@ -24,8 +24,8 @@ inputs = {
     cluster_version                      = "1.32"
 
     vpc_id                               = include.env.locals.vpc_id
-    subnet_ids                           = [include.env.locals.eks_controlplane_subnet_az1,include.env.locals.eks_controlplane_subnet_az2]
-    control_plane_subnet_ids             = [include.env.locals.eks_controlplane_subnet_az1,include.env.locals.eks_controlplane_subnet_az2]
+    subnet_ids                           = [include.env.locals.cidr_private_subnet_block_1,include.env.locals.cidr_private_subnet_block_2]
+    control_plane_subnet_ids             = [include.env.locals.cidr_private_subnet_block_1,include.env.locals.cidr_private_subnet_block_2]
     vpc_cidr                             = [include.env.locals.vpc_cidr]
 
     eks_managed_node_groups = {
